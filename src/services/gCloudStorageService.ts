@@ -28,7 +28,7 @@ export class GCloudStorageService {
       if (exists) {
         this.storage.bucket(this.config.googleCloud.bucketName).file(fileName).createReadStream()
           .on('data', d => buffer += d)
-          .on('end', () => resolve(buffer));
+          .on('end', () => resolve((buffer === 'undefined') ? undefined : buffer));
       } else {
         resolve(undefined);
       }

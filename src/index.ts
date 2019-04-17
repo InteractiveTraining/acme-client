@@ -28,11 +28,10 @@ export class itAcmeClient {
           method: 'dns-01',
           email: this.config.email,
           domains: this.config.domain,
-          url: (this.config.acmeServer === 'staging') ? 'https://acme-staging.api.letsencrypt.org' : 'https://acme-v01.api.letsencrypt.org',
+          url: (this.config.acmeServer === 'staging') ? 'https://acme-staging.api.letsencrypt.org' : undefined,
           challenge: async (domain, _, data, done) => {
             await this.cloudflareService.removeChallengeRecord();
             this.cloudflareService.addChallengeRecord(data).then(async () => {
-              await this.cloudflareService.removeChallengeRecord();
               done();
             });
           },
@@ -42,6 +41,7 @@ export class itAcmeClient {
           await this.gCloudStorage.write('caCert', caCert);
           await this.gCloudStorage.write('privateKey', key);
           await this.gCloudStorage.write('accountKey', accountKey);
+          await this.cloudflareService.removeChallengeRecord();
           resolve1({
             key: key,
             cert: cert + `
