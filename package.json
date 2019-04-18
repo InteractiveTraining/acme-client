@@ -1,22 +1,41 @@
 {
-  "name": "it-acme-client",
+  "name": "@interactivetraining/acme-client",
   "version": "0.0.1",
-  "description": "",
+  "description": "Simple scalable automatic solution for obtaining SSL certificates.",
+  "keywords": [
+    "acme client",
+    "lets encrypt",
+    "ssl",
+    "cloud",
+    "typescript"
+  ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
-  "author": "Interactive Training",
+  "author": "Interactive Training (http://interactive.training)",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^11.13.5",
     "typescript": "^3.4.3"
   },
   "dependencies": {
     "@google-cloud/storage": "^2.5.0",
-    "@types/node": "^11.13.4",
     "cloudflare": "^2.4.1",
     "letiny": "^0.2.1-1",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.8.0"
+  },
+  "homepage": "https://github.com/InteractiveTraining/acme-client#acme-client",
+  "maintainers": [
+    "Adam LaCombe (https://github.com/adamlacombe)"
+  ],
+  "bugs": {
+    "url": "https://github.com/InteractiveTraining/acme-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InteractiveTraining/acme-client.git"
   }
 }

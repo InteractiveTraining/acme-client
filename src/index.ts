@@ -6,7 +6,7 @@ import {GCloudStorageService} from './services/gCloudStorageService';
 import {ConfigService} from './services/configService';
 import {CloudflareService} from './services/cloudflareService';
 
-export class itAcmeClient {
+export class AcmeClient {
   config: ConfigService;
   gCloudStorage: GCloudStorageService;
   cloudflareService: CloudflareService;
