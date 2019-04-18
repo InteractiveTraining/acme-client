@@ -60,7 +60,7 @@ export interface ICloudflareResourceZone {
   plan: any;
 }
 
-export class CloudflareZones {
+export declare class CloudflareZones {
   browse: (pagination?: Partial<ICloudflarePagination>) => Promise<ICloudflareResponse<ICloudflareResourceZone[]>>;
 }
 
@@ -86,13 +86,13 @@ export interface ICloudflareDeleteResource {
   id: string;
 }
 
-export class CloudflareDnsRecords {
+export declare class CloudflareDnsRecords {
   browse: (zoneId: string, pagination?: Partial<ICloudflarePagination>) => Promise<ICloudflareResponse<ICloudflareResourceDnsRecord[]>>;
   del: (zoneId: string, dnsRecordId: string) => Promise<ICloudflareResponse<ICloudflareDeleteResource>>;
   add: (zoneId: string, record: Partial<ICloudflareResourceDnsRecord>) => Promise<ICloudflareResponse<ICloudflareResourceDnsRecord>>;
 }
 
-export class CloudflareApi {
+export declare class CloudflareApi {
   zones: CloudflareZones;
   dnsRecords: CloudflareDnsRecords;
 }

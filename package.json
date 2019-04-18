@@ -1,6 +1,6 @@
 {
   "name": "@interactivetraining/acme-client",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Simple scalable automatic solution for obtaining SSL certificates.",
   "keywords": [
     "acme client",
