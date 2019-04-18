@@ -64,6 +64,7 @@ export class CloudflareService {
   addChallengeRecord(data: string) {
     this.challengeData = data;
     return new Promise(async (resolve) => {
+      console.log('adding _acme-challenge DNS record...');
       await this.cf.dnsRecords.add((await this.getZone()).id, {
         type: 'TXT',
         name: `_acme-challenge.${this.config.domain}`,
@@ -71,7 +72,8 @@ export class CloudflareService {
         proxied: false,
         ttl: 1
       });
-      this.locallyVerifyTxtRecord().then(() => resolve());
+      //this.locallyVerifyTxtRecord().then(() => resolve());
+      setTimeout(() => resolve(), 60000);
     })
   }
   
