@@ -36,6 +36,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InteractiveTraining/acme-client.git"
+    "url": "git://github.com/InteractiveTraining/acme-client.git"
   }
 }
