@@ -23,7 +23,8 @@ export class AcmeClient {
   getCert(): Promise<{ key: string, cert: string }> {
     return new Promise(async (resolve1) => {
       const currentCert = await this.gCloudStorage.read('cert');
-      if (!currentCert || !(currentCert && (new Date().getTime() - (letiny.getExpirationDate(currentCert) as Date).getTime()) / (1000 * 60 * 60 * 24.0))) {
+  
+      if (!currentCert || (currentCert && (new Date().getTime() + (60 * 60 * 24 * 28)) >= (letiny.getExpirationDate(currentCert) as Date).getTime())) {
         letiny.getCert({
           method: 'dns-01',
           email: this.config.email,

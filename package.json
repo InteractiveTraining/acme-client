@@ -1,6 +1,6 @@
 {
   "name": "@interactivetraining/acme-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple scalable automatic solution for obtaining SSL certificates.",
   "keywords": [
     "acme client",
@@ -12,7 +12,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "npmjs.publish": "npm publish --@interactivetraining:registry=https://registry.npmjs.org/ --access public"
   },
   "author": "Interactive Training (http://interactive.training)",
   "license": "MIT",
