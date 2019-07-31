@@ -1,6 +1,6 @@
 {
   "name": "@interactivetraining/acme-client",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple scalable automatic solution for obtaining SSL certificates.",
   "keywords": [
     "acme client",
@@ -24,7 +24,7 @@
   "dependencies": {
     "@google-cloud/storage": "^2.5.0",
     "cloudflare": "^2.4.1",
-    "letiny": "^0.2.1-1",
+    "letiny": "anatolsommer/letiny#master",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.8.0"
   },
