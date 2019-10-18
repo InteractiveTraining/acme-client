@@ -1,6 +1,6 @@
 {
   "name": "@interactivetraining/acme-client",
-  "version": "0.0.6",
+  "version": "0.1.6",
   "description": "Simple scalable automatic solution for obtaining SSL certificates.",
   "keywords": [
     "acme client",
@@ -17,16 +17,24 @@
   },
   "author": "Interactive Training (http://interactive.training)",
   "license": "MIT",
+  "dependencies": {
+    "@google-cloud/storage": "^4.0.0",
+    "cloudflare": "^2.4.1",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.8.0",
+    "acme-client": "^3.2.0",
+    "node-forge": "^0.9.1"
+  },
   "devDependencies": {
     "@types/node": "^11.13.5",
-    "typescript": "^3.4.3"
-  },
-  "dependencies": {
-    "@google-cloud/storage": "^2.5.0",
-    "cloudflare": "^2.4.1",
-    "letiny": "anatolsommer/letiny#master",
-    "reflect-metadata": "^0.1.13",
-    "typedi": "^0.8.0"
+    "typescript": "^3.4.3",
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "@types/acme-client": "^3.0.0",
+    "@types/node-forge": "^0.8.6",
+    "dotenv": "^8.2.0",
+    "@types/dotenv": "^6.1.1"
   },
   "homepage": "https://github.com/InteractiveTraining/acme-client#acme-client",
   "maintainers": [

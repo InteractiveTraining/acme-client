@@ -26,7 +26,6 @@ export interface IGoogleCloudCredentialsConfig {
 
 export interface IFileNameConfig {
   cert: string;
-  caCert: string;
   privateKey: string;
   accountKey: string;
 }

@@ -1,0 +1,6 @@
+# .npmignore
+.env
+.idea
+src
+jest.config.js
+setup-jest.ts
