@@ -23,7 +23,7 @@
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.8.0",
     "acme-client": "^3.2.0",
-    "node-forge": "^0.9.1"
+    "node-forge": "^0.10.0"
   },
   "devDependencies": {
     "@types/node": "^11.13.5",
